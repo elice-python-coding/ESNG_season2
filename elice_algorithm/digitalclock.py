@@ -1,3 +1,4 @@
+
 s = int(input())
 n = list(map(int,input()))
 
@@ -26,8 +27,9 @@ for i in range(len(n)):
     if n[i] in [2,3,5,6,8,9]:
         for g in range(s):
             arr_2d[2*s+2][g+1] = "-"
-    for x in arr_2d:
-        x.append(" ")
+    if i is not len(n)-1:
+        for x in arr_2d:
+            x.append(" ")
     for i in range(row):
         answer[i]= answer[i] + arr_2d[i]
     arr_2d = [[" "]*column for i in range(row)]
